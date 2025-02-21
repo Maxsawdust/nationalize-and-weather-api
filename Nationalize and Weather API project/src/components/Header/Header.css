@@ -1,0 +1,14 @@
+#header-div {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+
+.task-button {
+  padding: 0.5rem;
+  font-size: 3rem;
+  border-radius: 2rem;
+  border: 0;
+  box-shadow: 0.2rem 0.2rem 0.2rem black;
+}
