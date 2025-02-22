@@ -1,0 +1,68 @@
+.search-bar-button {
+  /* display */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* sizing */
+  padding: 0 !important;
+  height: 2.5em;
+  width: 2.5em;
+  /* styling */
+  background-color: #e9e9ed;
+  border: 0;
+  border-radius: 100%;
+  box-shadow: 0 0 0.3em #424242;
+  transition: all 0.1s;
+}
+
+.search-bar-button:hover {
+  background-color: #dadada;
+}
+
+.search-bar-button:active {
+  box-shadow: 0 0 0.2em #424242;
+}
+
+.hovered-element {
+  /* positioning */
+  position: absolute;
+  z-index: 1;
+  /* sizing */
+  padding: 0.2em;
+  font-size: 0.825em;
+  font-weight: 600;
+  /* styling */
+  border: 0;
+  border-radius: 0.5em;
+  background-color: #4f4f4f;
+}
+
+.hovered-element::after {
+  content: "";
+  /* positioning */
+  position: absolute;
+  transform: rotate(45deg);
+  top: -6px;
+  left: 12px;
+  z-index: -1;
+  /* sizing */
+  height: 2em;
+  width: 2em;
+  background-color: #4f4f4f;
+  /* styling */
+  border-radius: 0.3em;
+}
+
+#search-hover {
+  top: 46px;
+  left: 381px;
+}
+
+#locate-hover {
+  top: 46px;
+  left: 325px;
+}
+
+#locate-hover::after {
+  left: 108px;
+}

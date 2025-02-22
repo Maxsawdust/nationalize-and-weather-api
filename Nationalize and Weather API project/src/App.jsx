@@ -11,10 +11,10 @@ function App() {
 
   return (
     <>
-      <div id="main-container">
+      <main id="main-container">
         <Header onClick={setCurrentTask} />
         <div id="task-container">{currentTask}</div>
-      </div>
+      </main>
     </>
   );
 }
