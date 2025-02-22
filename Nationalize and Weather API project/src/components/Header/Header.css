@@ -1,8 +1,9 @@
 #header-div {
-  height: 10rem;
+  height: 10em;
   display: flex;
   align-items: center;
-  gap: 10rem;
+  gap: 10em;
+  box-shadow: 0 0.5em 0.1em -0.3em;
 }
 
 .task-button {
