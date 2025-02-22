@@ -1,0 +1,19 @@
+#input-form {
+  margin-top: 2em;
+}
+
+#submit-button {
+  /* spacing */
+  margin-left: 1.5em;
+  /* sizing */
+  padding: 0.5em 1em;
+  /* styling */
+  border-radius: 1em;
+  border: 0;
+  box-shadow: 0.2rem 0.2rem 0.2rem black;
+}
+
+#error-alert {
+  color: red;
+  margin-top: 1em;
+}
