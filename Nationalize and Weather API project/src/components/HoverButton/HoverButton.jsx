@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { buttonContents } from "./buttonContents";
 import "./HoverButton.css";
 
-export default function HoverButton({ value, id }) {
+export default function HoverButton({ value, id, type, onClick }) {
   // storing the currentHoverElement in a state
   const [currentHoverElement, setCurrentHoverElement] = useState(null);
   // storing the value property of the button in a ref
@@ -41,6 +41,9 @@ export default function HoverButton({ value, id }) {
         id={id}
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseLeave}
+        // only giving the button these properties if they are supplied
+        {...(type && { type: type })}
+        {...(onClick && { onClick: onClick })}
       >
         {buttonContents[contentsRef.current].svg}
       </button>

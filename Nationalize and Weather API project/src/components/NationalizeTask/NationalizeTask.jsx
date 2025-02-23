@@ -75,7 +75,7 @@ export default function NationalizeTask() {
     <>
       {resultJSX}
       <form id="input-form" onSubmit={guessNationality}>
-        <p>Enter your name to estimate your nationality!</p>
+        <p>Enter your surname to estimate your nationality!</p>
         <input type="text" ref={inputRef} />
         <button id="submit-button">Submit</button>
       </form>
