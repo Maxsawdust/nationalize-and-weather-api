@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import ErrorDisplay from "../ErrorDisplay/ErrorDisplay";
 import "./WeatherDisplay.css";
+import humidityIcon from "../../assets/images/humidity-icon.png";
+import windIcon from "../../assets/images/wind-icon.png";
+import precipitationIcon from "../../assets/images/precipitation-icon.png";
+import uvIcon from "../../assets/images/uv-icon.png";
+import DetailContainer from "../DetailContainer/DetailContainer";
 
 export default function WeatherDisplay({ query }) {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -38,7 +43,10 @@ export default function WeatherDisplay({ query }) {
     console.log(currentWeather);
     return (
       <div className="weather-display fade-in">
-        <h1 id="weather-heading">{currentWeather.location.name}</h1>
+        <div id="weather-heading">
+          <h1 id="location-name">{currentWeather.location.name}</h1>
+          <h2 id="location-country">{currentWeather.location.country}</h2>
+        </div>
         <div id="image-container">
           <img
             id="weather-image"
@@ -49,20 +57,26 @@ export default function WeatherDisplay({ query }) {
           <p id="weather-type">{currentWeather.current.condition.text}</p>
         </div>
         <div id="additional-details">
-          <div id="humidity">
-            <img src="" alt="" id="humidity-icon" />
-            <div className="text-container">
-              <p id="humidity-data">{currentWeather.current.humidity}</p>
-              <p id="humidity-text">Humidity</p>
-            </div>
-          </div>
-          <div id="wind-speed">
-            <img src="" alt="" id="wind-speed-icon" />
-            <div className="text-container">
-              <p id="wind-speed-data">{currentWeather.current.wind_mph}</p>
-              <p id="wind-speed-text">Wind Speed</p>
-            </div>
-          </div>
+          <DetailContainer
+            img={humidityIcon}
+            data={`${currentWeather.current.humidity}%`}
+            text="Humidity"
+          />
+          <DetailContainer
+            img={windIcon}
+            data={`${currentWeather.current.wind_mph} mph`}
+            text="Wind Speed"
+          />
+          <DetailContainer
+            img={precipitationIcon}
+            data={`${currentWeather.current.precip_mm} mm`}
+            text="Current precipitation"
+          />
+          <DetailContainer
+            img={uvIcon}
+            data={`${currentWeather.current.uv}`}
+            text="UV Index"
+          />
         </div>
       </div>
     );

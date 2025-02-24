@@ -16,6 +16,18 @@
   text-align: center;
 }
 
+#location-country {
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+#image-container {
+  padding-bottom: 1em;
+  width: 80%;
+  margin: 1em 0 2em 0;
+  box-shadow: 0em 1em 0.5em -0.8em #c0c0c0;
+}
+
 #weather-image {
   width: 5em;
   height: 5em;
@@ -27,4 +39,10 @@
 
 #weather-type {
   font-size: 0.825em;
+}
+
+#additional-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
 }

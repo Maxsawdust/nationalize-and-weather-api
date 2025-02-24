@@ -1,0 +1,13 @@
+.detail-container {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 1em;
+  font-size: 0.875em;
+  color: #484848;
+}
+
+.detail-container > img {
+  width: 3em;
+  height: 3em;
+}
