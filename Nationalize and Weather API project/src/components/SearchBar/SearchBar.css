@@ -1,4 +1,7 @@
 #weather-search-bar {
+  /* these specific widths are because it looked great for me on firefox, but completely
+     wrong on chrome */
+  width: 479.5px;
   display: flex;
   gap: 0.5em;
   padding: 0 1em;
@@ -7,6 +10,9 @@
 }
 
 #weather-input {
+  /* these specific widths are because it looked great for me on firefox, but completely
+     wrong on chrome */
+  width: 364.867px;
   height: 2em;
   padding: 0 1em;
   font-size: 1.1em;

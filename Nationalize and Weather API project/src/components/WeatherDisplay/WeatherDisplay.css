@@ -1,0 +1,30 @@
+.weather-display {
+  /* sizing */
+  width: 80%;
+  height: fit-content;
+  padding: 1em;
+  /* display */
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* styling */
+  color: black;
+  border-radius: 2em;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.379);
+  background-color: #e9e9ed;
+  text-align: center;
+}
+
+#weather-image {
+  width: 5em;
+  height: 5em;
+}
+
+#temperature {
+  color: #3b3b3b;
+}
+
+#weather-type {
+  font-size: 0.825em;
+}

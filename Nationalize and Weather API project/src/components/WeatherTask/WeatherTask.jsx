@@ -1,8 +1,9 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import "./WeatherTask.css";
 import SearchBar from "../SearchBar/SearchBar";
 import ErrorDisplay from "../ErrorDisplay/ErrorDisplay";
 import WeatherDisplay from "../WeatherDisplay/WeatherDisplay";
+import validateInput from "./validateInput";
 
 /* TODO:
     Create rest of task */
@@ -12,11 +13,21 @@ export default function WeatherTask() {
   const errorRef = useRef(null);
   // state to control the location of which the weather shall be displayed
   const [weatherLocation, setWeatherLocation] = useState(null);
-  // using effect to call a function when weatherLocation is changed
-  useEffect(() => console.log(weatherLocation), [weatherLocation]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // checking that the input isn't empty
+    try {
+      validateInput(inputRef.current.value);
+    } catch (err) {
+      errorRef.current = `ERROR: ${err.message}`;
+      setWeatherLocation("error");
+      return;
+    }
+    // setting the location to the user's input
+    setWeatherLocation(inputRef.current.value);
+    // resetting the input bar
+    inputRef.current.value = "";
   };
 
   // function to get the user's location only if the button is pressed

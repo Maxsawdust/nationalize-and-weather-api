@@ -2,6 +2,7 @@
   /* sizing */
   width: 80%;
   height: 7.5em;
+  padding: 1em;
   /* display */
   margin-top: 1.5em;
   display: flex;
@@ -11,7 +12,6 @@
   /* styling */
   background-color: #ff0000b7;
   border-radius: 1em;
-  animation: fadeIn 0.2s ease;
 }
 
 #error-message {
@@ -24,15 +24,4 @@
   color: black;
   opacity: 0.7;
   font-style: italic;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
